@@ -19,14 +19,17 @@ Below is a visual representation of the webpage design:
 To view the website locally, follow these steps:
 
 1. Clone the repository or download the files.
-   ```
-   git clone https://github.com/BhoomiGohil/html-css-grid-bakery.git
-   cd html-css-grid-bakery
-   ```
+
+```
+git clone https://github.com/BhoomiGohil/Grid-BakeryUI.git
+cd Grid-BakeryUI
+```
+
 2. Open the `Index.html` file in your web browser.
-   ```
-   open Index.html
-   ```
+
+```
+open Index.html
+```
 
 OR
 

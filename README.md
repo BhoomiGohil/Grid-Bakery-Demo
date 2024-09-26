@@ -21,8 +21,8 @@ To view the website locally, follow these steps:
 1. Clone the repository or download the files.
 
 ```
-git clone https://github.com/BhoomiGohil/Grid-BakeryUI.git
-cd Grid-BakeryUI
+git clone https://github.com/BhoomiGohil/Grid-Bakery-Demo.git
+cd Grid-Bakery-Demo
 ```
 
 2. Open the `Index.html` file in your web browser.

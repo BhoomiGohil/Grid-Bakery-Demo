@@ -1,8 +1,8 @@
 html,
 body {
-  margin: 0px;
-  font-family: "Cabin";
+  margin: 0;
   background-image: url("Images/clouds.png");
+  font-family: cabin;
   box-sizing: border-box;
 }
 
@@ -12,147 +12,182 @@ body {
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: 0px;
-  font-family: "Niconne", cursive;
+  margin: 0;
+  font-family: Niconne;
   font-weight: normal;
-  color: #c80060;
+  color: #c82060;
 }
 
 p {
-  margin: 0;
+  margin: 12px 0px;
 }
+
+/* Common */
 
 .wrapper {
   width: 97%;
+  min-width: 320px;
   max-width: 1200px;
   margin: auto;
-  float: none;
 }
+
+/* Header */
 
 header {
-  margin: 20px 0px;
+  margin: 20px 0;
 }
 
+/* Navigation */
+
 nav {
-  padding-top: 12px;
-  background: url("../Images/scallop.png") repeat-x;
-  background-position: 0% 0%;
+  width: 100%;
+  padding-top: 10px;
+  background-image: url(Images/scallop.png);
 }
 
 nav ul {
   padding: 0.75em;
   margin: 0;
-  background-color: #e6bf98;
   border-bottom: 3px solid #cc8850;
+  background-color: #e6bf98;
   list-style-type: none;
-  overflow: auto;
 }
 
 nav li {
   display: inline;
+  padding: 1em;
 }
 
 nav a {
-  padding: 0em 1em 0em 1em;
-  color: #c80060;
-  text-decoration: none;
+  color: #c82060;
 }
 
-nav a:hover {
-  color: #00c4c7;
-}
+/* Content */
 
-.main {
-  padding: 2em;
+.content {
   display: grid;
-  grid-gap: 3em;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
+  grid-gap: 1.5rem;
+  justify-content: space-between;
+  padding: 2em;
   background-color: #fff6e0;
   border-radius: 0 0 10px 10px;
+  align-items: start;
+}
+
+/* Content Article */
+
+article {
+  display: grid;
+  grid-gap: 20px;
 }
 
 article h2 {
-  margin-bottom: 20px;
   font-size: 3em;
-  border-bottom: 2px dotted #c80060;
+  border-bottom: 2px dotted #c82060;
 }
 
-article img {
-  flex: 0 0 250px;
-  margin: 0px 0px 20px 20px;
-  float: right;
-  border-radius: 10px;
+article h4 {
+  font-family: Cabin;
+  font-weight: bold;
+  color: black;
 }
+
+article h3 {
+  margin-top: 0px;
+  font-size: 2em;
+}
+
+article div {
+  margin-top: 20px;
+}
+
+article div img {
+  width: 100%;
+}
+
+/* Content Section */
 
 section {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 20px;
+  align-items: stretch;
 }
 
-aside {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid;
-  border-radius: 10px;
+section div blockquote {
+  margin: 1rem;
+  display: grid;
+  gap: 10px;
 }
 
-aside h3 {
+section div blockquote p {
   margin: 0;
-  padding-left: 0.5em;
-  font-size: 32px;
+}
+
+section div blockquote cite {
+  text-transform: uppercase;
+  font-style: normal;
+  display: block;
+}
+
+/* Content Section Aside */
+
+section aside {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+section aside div {
+  width: 100%;
+  height: 100%;
+}
+
+section aside h3 {
+  padding: 0 0.5em;
+  margin-bottom: 0px;
+  font-size: 2em;
   color: white;
-  border-radius: 10px 10px 0 0;
 }
 
-aside:nth-child(odd) {
-  border-color: #00c4c7;
+section aside:nth-child(odd) {
+  border: 1px solid #00c4c7;
 }
 
-aside:nth-child(even) {
-  border-color: #c80060;
+section aside:nth-child(even) {
+  border: 1px solid #c80060;
 }
 
-aside:nth-child(odd) h3 {
+section aside:nth-child(odd) h3 {
   background-color: #00c4c7;
 }
 
-aside:nth-child(even) h3 {
+section aside:nth-child(even) h3 {
   background-color: #c80060;
 }
 
-aside blockquote {
-  padding: 1em;
-  margin: 0px;
-}
-
-aside blockquote cite {
-  display: block;
-  padding-top: 1em;
-  font-style: normal;
-  text-transform: uppercase;
-}
-
-aside img {
+section aside img {
   width: 100%;
   height: 100%;
-  display: block;
-  border-radius: 0px 0px 10px 10px;
   object-fit: cover;
 }
 
+/* Footer  */
+
 footer {
-  padding: 2rem 0;
   background-color: #00cdd1;
   color: white;
   clear: both;
-  border-radius: 0px 0px 10px 10px;
+  margin: 3em 0;
 }
 
 footer p {
@@ -160,7 +195,7 @@ footer p {
 }
 
 footer img {
-  width: 32px;
+  width: 52px;
 }
 
 footer a {
@@ -168,65 +203,65 @@ footer a {
   text-decoration: none;
 }
 
-@media (min-width: 550px) and (max-width: 849px) {
-  .wrapper {
-    max-width: 767px;
+.imgfloatright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+@media (max-width: 849px) {
+  .content {
+    grid-template-columns: 1fr;
   }
 
-  .main {
-    grid-template-columns: 1fr;
-    grid-gap: 1em;
+  article {
+    width: 100%;
   }
 
   article h2 {
-    font-size: x-large;
+    font-size: 1.5em;
+  }
+
+  article h3 {
+    font-size: 18.72px;
   }
 
   section {
-    width: 70%;
-    margin: auto;
-    display: grid;
-    grid-gap: 1em;
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
 
-  aside h3 {
-    font-size: 1.17em;
+  section aside h3 {
+    font-size: 18.72px;
   }
 }
 
-@media (min-width: 0px) and (max-width: 549px) {
-  .wrapper {
-    width: 100%;
+@media (max-width: 549px) {
+  nav ul {
+    overflow: auto;
+  }
+
+  nav li {
+    display: block;
+    padding: 0.5em;
+    width: 50%;
+    padding-left: 1em;
   }
 
   nav li:nth-child(odd) {
     float: left;
-    width: 50%;
-    padding: 0.5em;
   }
 
   nav li:nth-child(even) {
-    width: 50%;
-    padding: 0.5em;
     float: right;
   }
 
-  nav a {
-    display: block;
-    padding-left: 3.333333%;
-  }
-
-  .main {
+  section {
     grid-template-columns: 1fr;
-    grid-gap: 1em;
   }
+}
 
-  article h2 {
-    font-size: x-large;
-  }
-
-  aside h3 {
-    font-size: 1.17em;
+@media (max-width: 450px) {
+  .imgfloatright {
+    margin: 0 0 1em 0;
   }
 }
